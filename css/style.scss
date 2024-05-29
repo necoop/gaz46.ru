@@ -14,6 +14,12 @@ body {
   padding-right: 60px;
   margin: 0 auto;
 }
+@media (max-width: 991px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -24,6 +30,12 @@ body {
 .logo {
   display: flex;
   width: 429px;
+  width: clamp(
+    245px,
+    calc(245px + (429 - 245) * ((100vw - 430px) / (1440 - 430))),
+    429px
+  );
+  height: fit-content;
   position: relative;
   justify-content: space-between;
   overflow: hidden;
@@ -31,6 +43,7 @@ body {
 .logo > img:nth-child(1) {
   position: relative;
   z-index: 10;
+  width: 30.77%;
 }
 .jumper {
   position: absolute;
@@ -41,7 +54,7 @@ body {
 }
 .inscription {
   position: absolute;
-  width: 307px;
+  // width: 307px;
   height: 94px;
   background: #272727;
   border-radius: 50px;
@@ -49,9 +62,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 71.56%;
+  height: 100%;
+  font-size: clamp(
+    12px,
+    calc(12px + (22 - 12) * ((100vw - 430px) / (1440 - 430))),
+    22px
+  );
+
   span {
     font-family: "Rimma-sans";
-    font-size: 22px;
+    // font-size: 22px;
     color: #fff;
     text-transform: uppercase;
   }
@@ -64,14 +85,16 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
+
 .menu__item {
   height: fit-content;
 }
 .nav__icons {
   display: flex;
   justify-content: space-between;
-  width: 115px;
+  // width: 115px;
   height: 50px;
+  gap: 15px;
 }
 .nav__icon {
   width: 50px;
@@ -90,5 +113,44 @@ body {
 .phone__icon {
   & img {
     width: 28px;
+  }
+}
+.mobile__icon {
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+.menu__icon {
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    left: 3px;
+  }
+  &::before {
+    top: -10px;
+  }
+  &::after {
+    top: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .menu {
+    display: none;
+  }
+  .desktop__icon {
+    display: none;
+  }
+  .mobile__icon {
+    display: block;
   }
 }

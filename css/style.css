@@ -16,6 +16,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 991px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -27,6 +33,9 @@ body {
 .logo {
   display: flex;
   width: 429px;
+  width: clamp(245px, 245px + 184 * (100vw - 430px) / 1010, 429px);
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
   justify-content: space-between;
   overflow: hidden;
@@ -35,6 +44,7 @@ body {
 .logo > img:nth-child(1) {
   position: relative;
   z-index: 10;
+  width: 30.77%;
 }
 
 .jumper {
@@ -47,7 +57,6 @@ body {
 
 .inscription {
   position: absolute;
-  width: 307px;
   height: 94px;
   background: #272727;
   border-radius: 50px;
@@ -55,10 +64,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 71.56%;
+  height: 100%;
+  font-size: clamp(12px, 12px + 10 * (100vw - 430px) / 1010, 22px);
 }
 .inscription span {
   font-family: "Rimma-sans";
-  font-size: 22px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -80,8 +91,8 @@ body {
 .nav__icons {
   display: flex;
   justify-content: space-between;
-  width: 115px;
   height: 50px;
+  gap: 15px;
 }
 
 .nav__icon {
@@ -100,4 +111,45 @@ body {
 
 .phone__icon img {
   width: 28px;
+}
+
+.mobile__icon {
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+
+.menu__icon {
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+.menu__icon::before, .menu__icon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  left: 3px;
+}
+.menu__icon::before {
+  top: -10px;
+}
+.menu__icon::after {
+  top: 10px;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    display: none;
+  }
+  .desktop__icon {
+    display: none;
+  }
+  .mobile__icon {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
