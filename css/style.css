@@ -1,10 +1,40 @@
 @font-face {
+  font-family: "Geologica";
+  src: url(../fonts/Geologica-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Geologica";
+  src: url(../fonts/Geologica-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Geologica";
+  src: url(../fonts/Geologica-Thin.ttf) format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Geologica";
+  src: url(../fonts/Geologica-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Geologica";
+  src: url(../fonts/Geologica-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Geologica";
+  src: url(../fonts/Geologica-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
   font-family: "Rimma-sans";
   src: url(../fonts/RIMMA_SANS-BOLD.TTF) format("truetype");
 }
 body {
   font-family: "Geologica";
-  font-weight: 500;
+  font-weight: 700;
   color: #272727;
 }
 
@@ -152,4 +182,83 @@ body {
   .mobile__icon {
     display: block;
   }
+}
+.main__text h1 {
+  font-size: 52px;
+  letter-spacing: -2.08px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.main__text h1 > p:nth-child(3) {
+  margin-top: -10px;
+}
+
+.main__text > p:nth-child(2) {
+  margin-top: -5px;
+  font-size: 20px;
+  font-weight: 100;
+  max-width: 530px;
+}
+
+.playfair {
+  margin-top: -10px;
+  font-family: "Playfair Display";
+}
+
+.main__text {
+  margin-top: 144px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.button__container {
+  display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 33px;
+  gap: 30px;
+}
+
+.main__button {
+  text-transform: capitalize;
+  height: 92px;
+  display: flex;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.addresses {
+  padding: 0 56px;
+  background: #f11820;
+}
+
+.call__box {
+  display: flex;
+  align-items: center;
+}
+
+.call {
+  padding: 0 60px 0 48px;
+  background: #006939;
+}
+
+.metaball {
+  margin-left: -14px;
+  width: 54px;
+  height: 60px;
+}
+
+.phone__ball {
+  width: 92px;
+  height: 92px;
+  background: #006939;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: -12px;
 }/*# sourceMappingURL=style.css.map */
