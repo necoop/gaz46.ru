@@ -180,6 +180,8 @@ main {
     display: flex;
     justify-content: space-between;
   }
+  padding-bottom: 161px;
+  margin-bottom: 24px;
 }
 .main__text {
   h1 {
@@ -242,7 +244,7 @@ main {
   background: #006939;
 }
 .metaball {
-  margin-left: -14px;
+  margin-left: -13px;
   width: 54px;
   height: 60px;
 }
@@ -264,11 +266,27 @@ main {
 .main__pic {
   max-width: 100%;
 }
+
+
+// MAP
+
+map{
+  display: block;
+  width: 100%;
+  height: clamp(
+    430px,
+    calc(430px + (575 - 430) * ((100vw - 360px) / (1440 - 360))),
+    575px
+  );
+  // background: gray;
+}
+
 @media (max-width: 1440px) {
   main {
     &.container {
       flex-direction: column-reverse;
       align-items: center;
+      padding-bottom: 80px;
     }
   }
   .main__pic__container {
@@ -303,7 +321,7 @@ main {
     flex-direction: column;
   }
   .call {
-    width: calc(100% - 120px);
+    width: calc(100% - 121px);
   }
 }
 @media (max-width: 991px) {
