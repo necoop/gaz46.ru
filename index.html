@@ -14,7 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=38b7cf08-22fd-49f3-a829-20e5e4aa5a47" type="text/javascript"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=38b7cf08-22fd-49f3-a829-20e5e4aa5a47"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <nav class="nav container">
@@ -56,8 +59,8 @@
         </h1>
         <p>
           Мы занимаемся оптовой и розничной торговлей сжиженным углеводородным
-          газом (пропан), а&nbsp;так&nbsp;же&nbsp;заправкой автомобильных и бытовых
-          газовых баллонов.
+          газом (пропан), а&nbsp;так&nbsp;же&nbsp;заправкой автомобильных и
+          бытовых газовых баллонов.
         </p>
         <div class="button__container">
           <a href="#" class="main__button addresses">адреса</a>
@@ -89,54 +92,13 @@
         <img src="img/gas_station.png" alt="Заправка" class="main__pic" />
       </div>
     </main>
-    <map name="yandex" id="map" class="container">
-
-    </map>
-    <script type="text/javascript">
-      ymaps.ready(init);
-
-      function init() {
-          var places = [
-              { coordinates: [51.217653, 35.308879], hintContent: "Газовая заправка", balloonContent: "Заправка автомобильных и бытовых баллонов" },
-              { coordinates: [51.71468, 36.0771], hintContent: "Газовая заправка", balloonContent: "Заправка автомобильных и бытовых баллонов" },
-              { coordinates: [51.429899, 34.879685], hintContent: "Газовая заправка", balloonContent: "Заправка автомобильных и бытовых баллонов" }
-          ];
-
-          // Рассчитываем центр карты
-          var center = calculateCenter(places);
-
-          // Создаем карту
-          var myMap = new ymaps.Map("map", {
-              center: center, // Устанавливаем центр карты
-              zoom: 8, // Масштаб карты
-              controls: ['zoomControl'] // Удаляем все элементы управления кроме зума
-          });
-
-          // Отключаем изменение масштаба по скроллу
-          myMap.behaviors.disable('scrollZoom');
-
-          // Добавляем метки на карту
-          places.forEach(function(place) {
-              var placemark = new ymaps.Placemark(place.coordinates, {
-                  hintContent: place.hintContent,
-                  balloonContent: place.balloonContent
-              }, {
-                  preset: 'islands#redIcon' // Устанавливаем красный цвет маркера
-              });
-              myMap.geoObjects.add(placemark);
-          });
-      }
-
-      function calculateCenter(places) {
-          var sumLat = 0;
-          var sumLon = 0;
-          places.forEach(function(place) {
-              sumLat += place.coordinates[0];
-              sumLon += place.coordinates[1];
-          });
-          return [sumLat / places.length, sumLon / places.length];
-      }
-  </script>
-  
+    <map name="yandex" id="map" class="container"> </map>
+    <script src="scripts/ymap.js"></script>
+    <address class="address container">
+      <div class="address__title">
+        <h2 class="adaptive__title"><span>Наши</span>&nbsp;<span>Адреса</span></h2>
+        <span class="address__span">ООО&nbsp;«ГАЗИНЖИНИРИНГ» владеет сетью из&nbsp;трёх газозаправочных станций (АГЗС), расположенных в&nbsp;Курской области. Мы&nbsp;предлагаем качественные услуги по&nbsp;заправке газового оборудования.</span>
+      </div>
+    </address>
   </body>
 </html>

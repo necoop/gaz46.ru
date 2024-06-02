@@ -35,6 +35,7 @@
 body {
   font-family: "Geologica";
   font-weight: 700;
+  font-style: normal;
   color: #272727;
 }
 
@@ -276,10 +277,17 @@ main.container {
   max-width: 100%;
 }
 
-map {
+#map {
   display: block;
   width: 100%;
   height: clamp(430px, 430px + 145 * (100vw - 360px) / 1080, 575px);
+  margin-bottom: 60px;
+}
+
+.adaptive__title {
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 @media (max-width: 1440px) {
@@ -310,6 +318,9 @@ map {
   .call {
     width: calc(100% - 121px);
   }
+  .adaptive__title {
+    font-size: clamp(32px, 32px + 20 * (100vw - 430px) / 1010, 52px);
+  }
 }
 @media (max-width: 991px) {
   .menu {
@@ -326,5 +337,32 @@ map {
   }
   .mobile__button {
     display: flex;
+  }
+  #map {
+    margin-bottom: 40px;
+  }
+}
+.address__title {
+  display: flex;
+  justify-content: space-between;
+}
+.address__title h2 > span:nth-child(2) {
+  font-family: "Playfair Display";
+  font-style: italic;
+}
+
+.address__span {
+  max-width: 333px;
+  width: 100%;
+  font-weight: 100;
+}
+
+@media (max-width: 599px) {
+  .address__title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 358px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
