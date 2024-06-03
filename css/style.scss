@@ -194,6 +194,9 @@ main {
       margin-top: -10px;
     }
   }
+  .playfair {
+    margin-top: -10px;
+  }
 }
 .main__text > p:nth-child(2) {
   margin-top: -5px;
@@ -202,8 +205,8 @@ main {
   max-width: 530px;
 }
 .playfair {
-  margin-top: -10px;
   font-family: "Playfair Display";
+  font-style: italic;
 }
 .main__text {
   margin-top: 144px;
@@ -269,7 +272,6 @@ main {
 }
 
 // MAP
-
 #map {
   display: block;
   width: 100%;
@@ -285,6 +287,157 @@ main {
   font-size: 52px;
   font-style: normal;
   font-weight: 500;
+}
+
+// АДРЕСА
+.address {
+  font-style: normal;
+}
+.address__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  & h2 > span:nth-child(2) {
+    font-family: "Playfair Display";
+    font-style: italic;
+  }
+}
+.address__span {
+  max-width: 333px;
+  width: 100%;
+  font-weight: 100;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: 500;
+  margin-bottom: 120px;
+}
+.contact__item {
+  width: 100%;
+  max-width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.address__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &::before {
+    content: url(../img/pointer.svg);
+    display: inline-block;
+    width: 30px;
+    height: 43px;
+  }
+}
+.phone__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &::before {
+    content: url(../img/green_phone.svg);
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+  }
+}
+.phone__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container__min {
+  max-width: 1320px;
+  padding: 0 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.frame__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 120px;
+  &::before,
+  &::after {
+    content: "";
+    width: calc(100% - 122px);
+    height: 2px;
+    background: #272727;
+  }
+}
+.address__frame {
+  margin: 0 22px;
+}
+
+// Секция ПРОПАН
+.propane {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  h2 {
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+}
+.propane__text {
+  max-width: 536px;
+  padding-top: 56px;
+}
+.stove__img {
+  margin-right: 20px;
+  border-radius: 30px;
+  max-width: 650px;
+}
+.propane__description {
+  font-family: "Geologica";
+  font-size: 26px;
+  font-weight: 100;
+  line-height: 1.3;
+  margin-bottom: 38px;
+}
+.propane__proporties {
+  display: flex;
+  justify-content: space-between;
+}
+.proporties__item {
+  font-family: "Geologica";
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.3;
+  padding: 18px 28px;
+  border-radius: 50px;
+  border: 2px solid #f11820;
+}
+
+// Секция SERVICES
+.services__inner {
+  padding: 120px 42px;
+  background: #006939;
+  border-radius: 30px;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+.our__services{
+  display: flex;
+  justify-content: space-between;
+  .adaptive__title{
+    align-self: center;
+    margin-right: 15px;
+  }
+}
+.services__description{
+  max-width: 387px;
+  font-family: 'Geologica';
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.3;
 }
 
 @media (max-width: 1440px) {
@@ -336,86 +489,21 @@ main {
       52px
     );
   }
-}
-
-// АДРЕСА
-.address {
-  font-style: normal;
-}
-.address__title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 80px;
-  & h2 > span:nth-child(2) {
-    font-family: "Playfair Display";
-    font-style: italic;
-  }
-}
-.address__span {
-  max-width: 333px;
-  width: 100%;
-  font-weight: 100;
-}
-
-@media (max-width: 690px) {
-  .address__title {
+  .propane {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    max-width: 358px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 26px;
+    align-items: center;
   }
-}
-.contacts {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-weight: 500;
-  margin-bottom: 120px;
-}
-.contact__item {
-  width: 100%;
-  max-width: 33.3%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.address__item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  &::before{
-    content: url(../img/pointer.svg);
-    display: inline-block; /* Добавлено свойство display */
-    width: 30px;
-    height: 43px;
+  .stove__img {
+    width: 100%;
+    margin: 0;
   }
-}
-.phone__item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  &::before{
-    content: url(../img/green_phone.svg);
-    display: inline-block; /* Добавлено свойство display */
-    width: 35px;
-    height: 35px;
+  .propane__description {
+    font-size: clamp(
+      16px,
+      calc(16px + (26 - 16) * ((100vw - 430px) / (1440 - 430))),
+      26px
+    );
   }
-}
-.phone__box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.container__min {
-  max-width: 1320px;
-  padding: 0 40px;
-  width: 100%;
-  // padding-left: 60px;
-  // padding-right: 60px;
-  margin: 0 auto;
 }
 @media (max-width: 991px) {
   .menu {
@@ -451,25 +539,51 @@ main {
   .address__item {
     gap: 50px;
   }
+  .frame__container {
+    margin-bottom: 80px;
+  }
+  .propane {
+    margin-bottom: 80px;
+  }
+  .propane__text {
+    padding-top: 40px;
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  .propane__description {
+    margin-bottom: 20px;
+  }
+.services__inner{
+  padding: 40px 20px;
 }
-.address__frame {
-  display: flex;
-  align-items: center;
-  width: 200px;
-  height: 20px;
-  // margin: 0 auto;
-  padding: 0;
-  margin-bottom: 120px;
-  position: relative;
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 100px;
-    height: 2px;
-    background: #272727;
-    border-color: #272727;
-    position: absolute;
-    top: 0;
-    left: 0;
+}
+@media (max-width: 690px) {
+  .address__title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 358px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+  }
+  .proporties__item {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+  .stove__img {
+    border-radius: 15px;
+  }
+  .our__services{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 470px) {
+  .proporties__item {
+    font-size: 12px;
+    padding: 8px 10px;
   }
 }
