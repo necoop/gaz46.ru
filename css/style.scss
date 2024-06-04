@@ -61,11 +61,7 @@ body {
 .logo {
   display: flex;
   width: 429px;
-  width: clamp(
-    245px,
-    calc(245px + (429 - 245) * ((100vw - 430px) / (1440 - 430))),
-    429px
-  );
+  width: clamp(245px, calc(245px + (429 - 245) * ((100vw - 430px) / (1440 - 430))), 429px);
   height: fit-content;
   position: relative;
   justify-content: space-between;
@@ -95,11 +91,7 @@ body {
   justify-content: center;
   width: 71.56%;
   height: 100%;
-  font-size: clamp(
-    12px,
-    calc(12px + (22 - 12) * ((100vw - 430px) / (1440 - 430))),
-    22px
-  );
+  font-size: clamp(12px, calc(12px + (22 - 12) * ((100vw - 430px) / (1440 - 430))), 22px);
 
   span {
     font-family: "Rimma-sans";
@@ -275,11 +267,7 @@ main {
 #map {
   display: block;
   width: 100%;
-  height: clamp(
-    430px,
-    calc(430px + (575 - 430) * ((100vw - 360px) / (1440 - 360))),
-    575px
-  );
+  height: clamp(430px, calc(430px + (575 - 430) * ((100vw - 360px) / (1440 - 360))), 575px);
   margin-bottom: 60px;
 }
 
@@ -416,7 +404,7 @@ main {
 
 // Секция SERVICES
 .services__inner {
-  padding: 120px 42px;
+  padding: 120px 0;
   background: #006939;
   border-radius: 30px;
   max-width: 1320px;
@@ -424,21 +412,122 @@ main {
   margin-right: auto;
   color: #fff;
 }
-.our__services{
+.our__services {
+  padding-left: 42px;
+  padding-right: 42px;
   display: flex;
   justify-content: space-between;
-  .adaptive__title{
+  margin-bottom: 120px;
+  .adaptive__title {
     align-self: center;
     margin-right: 15px;
   }
 }
-.services__description{
+.services__description {
   max-width: 387px;
-  font-family: 'Geologica';
+  font-family: "Geologica";
   font-weight: 100;
   font-size: 16px;
   line-height: 1.3;
 }
+.service__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service__list {
+  padding-left: 42px;
+  padding-right: 42px;
+  h2 {
+    // letter-spacing: clamp(
+    //   -1.56px,
+    //   calc((32px + (52 - 32) * ((100vw - 430px) / (1440 - 430))) * -0.03),
+    //   -0.96px
+    // );
+    letter-spacing: -4px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+}
+.service__pic {
+  border-radius: 30px;
+}
+.service__text {
+  max-width: 609px;
+}
+.about__service {
+  font-family: "Geologica";
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.3;
+  margin-bottom: 29px;
+}
+.service__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 554px;
+}
+.service__btn {
+  font-family: "Geologica";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 28px 52px;
+  border: 5px solid #f11820;
+  width: fit-content;
+  border-radius: 50px;
+}
+.big__btn {
+  display: flex;
+  align-items: center;
+}
+.btn__jumper {
+  margin-left: -14px;
+}
+.box__envelope {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 5px solid #f11820;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -14px;
+}
+.btn__envelope {
+  width: 40px;
+  height: 32px;
+}
+.btn__phone {
+  width: 38px;
+  height: 38px;
+}
+.service__box {
+  margin-bottom: 120px;
+}
+.service__frame__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  &::before,
+  &::after {
+    content: "";
+    width: calc(100% - 122px);
+    height: 2px;
+    background: #fff;
+  }
+}
+.service__frame {
+  margin: 0 22px;
+}
+.service__pic {
+  max-width: 100%;
+}
+// li.service__button__item:nth-child(1){
+//   margin-right: 15px;
+// }
 
 @media (max-width: 1440px) {
   main {
@@ -454,26 +543,14 @@ main {
   .main__text {
     margin-top: 40px;
     & h1 {
-      font-size: clamp(
-        35px,
-        calc(35px + (52 - 35) * ((100vw - 360px) / (1440 - 360))),
-        52px
-      );
+      font-size: clamp(35px, calc(35px + (52 - 35) * ((100vw - 360px) / (1440 - 360))), 52px);
       & > p:nth-child(2) {
-        font-size: clamp(
-          29px,
-          calc(29px + (52 - 29) * ((100vw - 360px) / (1440 - 360))),
-          52px
-        );
+        font-size: clamp(29px, calc(29px + (52 - 29) * ((100vw - 360px) / (1440 - 360))), 52px);
         margin-bottom: 5px;
       }
     }
     & > p:nth-child(2) {
-      font-size: clamp(
-        16px,
-        calc(16px + (20 - 16) * ((100vw - 430px) / (1440 - 430))),
-        20px
-      );
+      font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 430px) / (1440 - 430))), 20px);
     }
   }
   .button__container {
@@ -483,11 +560,7 @@ main {
     width: calc(100% - 121px);
   }
   .adaptive__title {
-    font-size: clamp(
-      32px,
-      calc(32px + (52 - 32) * ((100vw - 430px) / (1440 - 430))),
-      52px
-    );
+    font-size: clamp(32px, calc(32px + (52 - 32) * ((100vw - 430px) / (1440 - 430))), 52px);
   }
   .propane {
     flex-direction: column;
@@ -498,11 +571,46 @@ main {
     margin: 0;
   }
   .propane__description {
-    font-size: clamp(
-      16px,
-      calc(16px + (26 - 16) * ((100vw - 430px) / (1440 - 430))),
-      26px
-    );
+    font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 430px) / (1440 - 430))), 26px);
+  }
+  .our__services {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .service__box {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .about__service {
+    font-size: 16px;
+  }
+  .service__list h2 {
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+  }
+  .services__description,
+  .service__text {
+    max-width: 496px;
+  }
+  .service__buttons {
+    flex-direction: column;
+    gap: 72px;
+  }
+  .service__button__item {
+    width: 100%;
+  }
+  .service__address {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  .big__btn {
+    width: 100%;
+  }
+  span.service__address {
+    width: calc(100% - 121px);
   }
 }
 @media (max-width: 991px) {
@@ -554,9 +662,23 @@ main {
   .propane__description {
     margin-bottom: 20px;
   }
-.services__inner{
-  padding: 40px 20px;
-}
+  .services__inner {
+    padding: 40px 0;
+    border-radius: 15px;
+  }
+  .our__services {
+    margin-bottom: 40px;
+  }
+  .stove__img {
+    border-radius: 15px;
+  }
+  .service__pic {
+    border-radius: 15px;
+  }
+  .our__services, .service__list{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (max-width: 690px) {
   .address__title {
@@ -572,18 +694,39 @@ main {
     font-size: 14px;
     padding: 14px 20px;
   }
-  .stove__img {
-    border-radius: 15px;
+  .about__service {
+    margin-bottom: 72px;
   }
-  .our__services{
-    flex-direction: column;
+
+  // .service__text, .services__description{
+  //   max-width: 100%;
+  // }
+  // .our__services,
+  // .service__list {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
+  .service__btn {
+    padding: 0;
+    height: 92px;
+    display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+  }
+  .service__buttons {
+    gap: 32px;
+  }
+  .service__box{
+    margin-bottom: 80px;
   }
 }
 @media (max-width: 470px) {
   .proporties__item {
     font-size: 12px;
     padding: 8px 10px;
+  }
+  .services__description,
+  .service__text {
+    max-width: 100%;
   }
 }
