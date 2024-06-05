@@ -391,12 +391,13 @@ main.container {
 }
 .propane h2 {
   font-style: italic;
-  margin-bottom: 32px;
 }
 
 .propane__text {
   max-width: 536px;
-  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .stove__img {
@@ -410,7 +411,6 @@ main.container {
   font-size: 26px;
   font-weight: 100;
   line-height: 1.3;
-  margin-bottom: 38px;
 }
 
 .propane__proporties {
@@ -459,7 +459,7 @@ main.container {
 
 .service__box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -555,7 +555,8 @@ main.container {
 }
 
 .service__pic {
-  max-width: 100%;
+  max-width: 45%;
+  align-self: center;
 }
 
 p.about__service:nth-child(3) {
@@ -563,77 +564,92 @@ p.about__service:nth-child(3) {
 }
 
 @media (max-width: 1440px) {
-  main.container {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-bottom: 80px;
-  }
   .main__pic__container {
     padding-top: 80px;
   }
+  .button__container {
+    gap: 20px;
+  }
+  .addresses {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: clamp(36px, 36px + 20 * (100vw - 992px) / 448, 56px);
+    padding-right: clamp(36px, 36px + 20 * (100vw - 992px) / 448, 56px);
+  }
   .main__text {
-    margin-top: 40px;
+    margin-top: 80px;
+    max-width: 45%;
   }
   .main__text h1 {
-    font-size: clamp(35px, 35px + 17 * (100vw - 360px) / 1080, 52px);
+    font-size: clamp(33px, 33px + 19 * (100vw - 992px) / 448, 52px);
   }
   .main__text h1 > p:nth-child(2) {
-    font-size: clamp(29px, 29px + 23 * (100vw - 360px) / 1080, 52px);
-    margin-bottom: 5px;
+    font-size: clamp(26px, 26px + 20 * (100vw - 992px) / 448, 46px);
   }
   .main__text > p:nth-child(2) {
-    font-size: clamp(16px, 16px + 4 * (100vw - 430px) / 1010, 20px);
-  }
-  .button__container {
-    flex-direction: column;
+    font-size: clamp(16px, 16px + 4 * (100vw - 992px) / 448, 20px);
   }
   .call {
     width: calc(100% - 121px);
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: clamp(36px, 36px + 20 * (100vw - 992px) / 448, 56px);
+    padding-right: clamp(36px, 36px + 20 * (100vw - 992px) / 448, 56px);
   }
   .adaptive__title {
-    font-size: clamp(26px, 26px + 26 * (100vw - 360px) / 1080, 52px);
-  }
-  .propane {
-    flex-direction: column;
-    align-items: center;
+    font-size: clamp(26px, 26px + 9 * (100vw - 992px) / 448, 35px);
   }
   .stove__img {
     width: 100%;
     margin: 0;
+    max-width: 45%;
   }
   .propane__description {
-    font-size: clamp(16px, 16px + 10 * (100vw - 430px) / 1010, 26px);
+    font-size: clamp(16px, 16px + 10 * (100vw - 992px) / 448, 26px);
+  }
+  .propane__text {
+    max-width: 45%;
+  }
+  .proporties__item {
+    font-size: clamp(14px, 14px + 2 * (100vw - 992px) / 448, 16px);
+    padding: 15px 11px;
+    padding-left: clamp(11px, 11px + 17 * (100vw - 992px) / 448, 28px);
+    padding-right: clamp(11px, 11px + 17 * (100vw - 992px) / 448, 28px);
   }
   .our__services {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
   }
-  .service__box {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+  .our__services .adaptive__title {
+    align-self: center;
+    margin-right: 0;
+    width: 45%;
   }
   .about__service {
     font-size: 16px;
   }
   .service__list h2 {
-    margin-bottom: 18px;
+    margin-bottom: 0;
     letter-spacing: -1px;
   }
   .services__description,
   .service__text {
-    max-width: 496px;
+    width: 45%;
   }
-  .service__buttons {
+  .service__text {
+    display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: 30px;
+  }
+  .service__btn {
+    padding-left: clamp(16px, 16px + 36 * (100vw - 992px) / 448, 56px);
+    padding-right: clamp(16px, 16px + 36 * (100vw - 992px) / 448, 56px);
   }
   .service__button__item {
     width: 100%;
   }
   .service__address {
-    width: 100%;
     display: inline-block;
     text-align: center;
   }
@@ -642,17 +658,6 @@ p.about__service:nth-child(3) {
   }
   span.service__address {
     width: calc(100% - 121px);
-  }
-  .our__services {
-    max-width: 496px;
-    width: 100%;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .our__services .adaptive__title {
-    align-self: flex-start;
-    margin-right: 0;
   }
   .service__list {
     padding-top: 80px;
@@ -668,9 +673,10 @@ p.about__service:nth-child(3) {
   }
   .services__inner {
     padding-top: 40px;
+    padding-bottom: 40px;
   }
   .about__service {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 991px) {
@@ -688,6 +694,42 @@ p.about__service:nth-child(3) {
   }
   .mobile__button {
     display: flex;
+  }
+  .addresses {
+    padding: 0 56px;
+    background: #f11820;
+  }
+  .call {
+    padding: 0 60px 0 48px;
+  }
+  main.container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+  .main__text {
+    max-width: 650px;
+  }
+  .main__text h1 {
+    font-size: clamp(35px, 35px + 17 * (100vw - 360px) / 1080, 52px);
+    max-width: 100%;
+  }
+  .main__text h1 .adaptive__title {
+    font-size: clamp(26px, 26px + 26 * (100vw - 360px) / 1080, 52px);
+  }
+  .main__text h1 > p:nth-child(2) {
+    font-size: clamp(29px, 29px + 23 * (100vw - 360px) / 1080, 52px);
+    margin-bottom: 5px;
+  }
+  .main__text > p:nth-child(2) {
+    font-size: clamp(16px, 16px + 4 * (100vw - 430px) / 1010, 20px);
+  }
+  .main__text {
+    margin-top: 40px;
+  }
+  .button__container {
+    flex-direction: column;
+    gap: 30px;
   }
   #map {
     margin-bottom: 40px;
@@ -711,9 +753,12 @@ p.about__service:nth-child(3) {
     margin-bottom: 80px;
   }
   .propane {
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 80px;
   }
   .propane__text {
+    max-width: 536px;
     padding-top: 40px;
   }
   .propane__text h2 {
@@ -721,6 +766,15 @@ p.about__service:nth-child(3) {
   }
   .propane__description {
     margin-bottom: 20px;
+    font-size: clamp(16px, 16px + 10 * (100vw - 430px) / 1010, 26px);
+  }
+  .proporties__item {
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 18px 28px;
+    padding-left: clamp(10px, 10px + 12 * (100vw - 360px) / 631, 22px);
+    padding-right: clamp(10px, 10px + 12 * (100vw - 360px) / 631, 22px);
+    border-radius: 50px;
   }
   .services__inner {
     padding: 40px 0;
@@ -728,6 +782,13 @@ p.about__service:nth-child(3) {
   }
   .stove__img {
     border-radius: 15px;
+    max-width: 496px;
+  }
+  .propane__text {
+    max-width: 496px;
+  }
+  .service__pic {
+    max-width: 100%;
   }
   .service__pic {
     border-radius: 15px;
@@ -735,12 +796,59 @@ p.about__service:nth-child(3) {
   .services__inner {
     padding-top: 40px;
   }
-  .our__services, .service__list {
+  .service__buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .our__services {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 528px;
+    width: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .our__services .adaptive__title {
+    align-self: flex-start;
+    margin-right: 0;
+    width: 100%;
+  }
+  .services__description {
+    width: 100%;
+  }
+  .service__text {
+    width: 100%;
+  }
+  .services__description,
+  .service__text {
+    max-width: 496px;
+  }
+  .service__box {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .service__list h2 {
+    margin-bottom: 18px;
+  }
+  .service__buttons {
+    gap: 72px;
+  }
+  .service__btn {
+    width: 100%;
+  }
+  .about__service {
+    margin-bottom: 40px;
+  }
+  .our__services,
+  .service__list {
     padding-right: 16px;
     padding-left: 16px;
   }
   p.about__service:nth-child(3) {
-    margin-top: -27px;
+    margin-top: -57px;
   }
 }
 @media (max-width: 690px) {
