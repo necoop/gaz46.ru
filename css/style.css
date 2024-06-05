@@ -429,7 +429,7 @@ main.container {
 }
 
 .services__inner {
-  padding: 120px 0;
+  padding-top: 120px;
   background: #006939;
   border-radius: 30px;
   max-width: 1320px;
@@ -443,7 +443,6 @@ main.container {
   padding-right: 42px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 120px;
 }
 .our__services .adaptive__title {
   align-self: center;
@@ -465,8 +464,7 @@ main.container {
 }
 
 .service__list {
-  padding-left: 42px;
-  padding-right: 42px;
+  padding: 120px 42px;
 }
 .service__list h2 {
   letter-spacing: -4px;
@@ -539,10 +537,6 @@ main.container {
   height: 38px;
 }
 
-.service__box {
-  margin-bottom: 120px;
-}
-
 .service__frame__container {
   display: flex;
   justify-content: center;
@@ -562,6 +556,10 @@ main.container {
 
 .service__pic {
   max-width: 100%;
+}
+
+p.about__service:nth-child(3) {
+  margin-top: -18px;
 }
 
 @media (max-width: 1440px) {
@@ -593,7 +591,7 @@ main.container {
     width: calc(100% - 121px);
   }
   .adaptive__title {
-    font-size: clamp(32px, 32px + 20 * (100vw - 430px) / 1010, 52px);
+    font-size: clamp(26px, 26px + 26 * (100vw - 360px) / 1080, 52px);
   }
   .propane {
     flex-direction: column;
@@ -644,6 +642,35 @@ main.container {
   }
   span.service__address {
     width: calc(100% - 121px);
+  }
+  .our__services {
+    max-width: 496px;
+    width: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .our__services .adaptive__title {
+    align-self: flex-start;
+    margin-right: 0;
+  }
+  .service__list {
+    padding-top: 80px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+  div.service__list:nth-child(6) {
+    padding-bottom: 0;
+  }
+  div.service__list:nth-child(2) {
+    padding-top: 40px;
+  }
+  .services__inner {
+    padding-top: 40px;
+  }
+  .about__service {
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 991px) {
@@ -699,18 +726,21 @@ main.container {
     padding: 40px 0;
     border-radius: 15px;
   }
-  .our__services {
-    margin-bottom: 40px;
-  }
   .stove__img {
     border-radius: 15px;
   }
   .service__pic {
     border-radius: 15px;
   }
+  .services__inner {
+    padding-top: 40px;
+  }
   .our__services, .service__list {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  p.about__service:nth-child(3) {
+    margin-top: -27px;
   }
 }
 @media (max-width: 690px) {
@@ -727,9 +757,6 @@ main.container {
     font-size: 14px;
     padding: 14px 20px;
   }
-  .about__service {
-    margin-bottom: 72px;
-  }
   .service__btn {
     padding: 0;
     height: 92px;
@@ -739,9 +766,6 @@ main.container {
   }
   .service__buttons {
     gap: 32px;
-  }
-  .service__box {
-    margin-bottom: 80px;
   }
 }
 @media (max-width: 470px) {
