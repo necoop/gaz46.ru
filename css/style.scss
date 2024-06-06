@@ -32,6 +32,17 @@
   font-family: "Rimma-sans";
   src: url(../fonts/RIMMA_SANS-BOLD.TTF) format("truetype");
 }
+html {
+  /* Базовый размер шрифта */
+  font-size: 1px;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: calc(100vw / 1440); /* Пропорционально изменяем размер */
+  }
+}
+
 body {
   font-family: "Geologica";
   font-weight: 700;
@@ -310,6 +321,11 @@ main {
   flex-direction: column;
   gap: 30px;
 }
+.address__item,
+.phone__item,
+.address__span {
+  font-size: 16px;
+}
 .address__item {
   display: flex;
   align-items: center;
@@ -406,6 +422,9 @@ main {
 }
 
 // Секция SERVICES
+section.services {
+  margin-bottom: 120px;
+}
 .services__inner {
   padding-top: 120px;
   // padding: 120px 0;
@@ -536,9 +555,63 @@ main {
 p.about__service:nth-child(3) {
   margin-top: -18px;
 }
-// li.service__button__item:nth-child(1){
-//   margin-right: 15px;
-// }
+
+// Секция AVANAGES
+.avantages__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 42px;
+  margin-bottom: 60px;
+}
+.advatages__text {
+  max-width: 386px;
+  font-family: "Geologica";
+  font-weight: 100;
+  font-size: 16px;
+}
+.advantage__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 42px;
+  color: #fff;
+  font-family: "Geologica";
+  font-weight: 400;
+  font-size: 1rem;
+
+}
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350em;
+  aspect-ratio: 350 / 250;
+  // width: 350rem;
+  // height: 250rem;
+  background: #f11820;
+  padding: 32rem 46rem 29rem;
+  border-radius: 15rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.advantage__top {
+  display: flex;
+  gap: 24rem;
+  justify-content: space-between;
+}
+.advantage__ico {
+  width: 76rem;
+  height: 76rem;
+}
+.advantage__text {
+  align-self: center;
+line-height: 1.2;
+font-size: 22em;
+}
+.stat{
+  font-size: 56em;
+  font-weight: 700;
+  line-height: 1.3;
+}
 
 @media (max-width: 1440px) {
   // main {
@@ -748,9 +821,12 @@ p.about__service:nth-child(3) {
     gap: 40px;
     font-size: 18px;
     margin-bottom: 80px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
   .contact__item {
-    max-width: 320px;
+    max-width: 100%;
     gap: 12px;
   }
   .phone__item,
@@ -783,6 +859,9 @@ p.about__service:nth-child(3) {
     padding-left: clamp(10px, calc(10px + (22 - 10) * ((100vw - 360px) / (991 - 360))), 22px);
     padding-right: clamp(10px, calc(10px + (22 - 10) * ((100vw - 360px) / (991 - 360))), 22px);
     border-radius: 50px;
+  }
+  section.services {
+    margin-bottom: 80px;
   }
   .services__inner {
     padding: 40px 0;
@@ -867,6 +946,16 @@ p.about__service:nth-child(3) {
   }
   p.about__service:nth-child(3) {
     margin-top: -57px;
+  }
+  .avantages__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+  .advatages__text {
+    max-width: 100%;
   }
 }
 @media (max-width: 690px) {
