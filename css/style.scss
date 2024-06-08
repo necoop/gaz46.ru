@@ -623,25 +623,25 @@ p.about__service:nth-child(3) {
 // Окончание ADVANTAGES
 
 // Секция FOOTER
-.footer{
+.footer {
   padding: 105px 40px;
   background: #006939;
   border-radius: 30px;
   margin-bottom: 60px;
 }
-.footer__menu{
+.footer__menu {
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
-.footer__pic{
+.footer__pic {
   width: 30.77%;
 }
-.footer__logo{
+.footer__logo {
   display: flex;
   width: clamp(245px, 245px + 184 * (100vw - 430px) / 1010, 429px);
 }
-.footer__inscription{
+.footer__inscription {
   width: 71.56%;
   // height: 94px;
   aspect-ratio: 307 / 94;
@@ -652,29 +652,29 @@ p.about__service:nth-child(3) {
   justify-content: center;
   align-items: center;
   color: #272727;
-  font-family: 'Rimma-sans';
+  font-family: "Rimma-sans";
   font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(12px, 12px + 10 * (100vw - 430px) / 1010, 22px);
 }
-.footer__nav{
+.footer__nav {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-family: 'Geologica';
+  font-family: "Geologica";
   font-size: 20px;
   text-transform: capitalize;
   color: #fff;
   align-items: center;
 }
-.footer__contacts{
+.footer__contacts {
   display: flex;
   gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
-.footer__contacts__item{
-  a{
+.footer__contacts__item {
+  a {
     width: 50px;
     height: 50px;
     display: flex;
@@ -684,11 +684,11 @@ p.about__service:nth-child(3) {
     background: #fff;
   }
 }
-.footer__envelope{
+.footer__envelope {
   width: 26px;
   height: 18px;
 }
-.footer__phone{
+.footer__phone {
   width: 28px;
   height: 28px;
 }
@@ -1028,20 +1028,20 @@ p.about__service:nth-child(3) {
   p.about__service:nth-child(3) {
     margin-top: -57px;
   }
-  .footer{
+  .footer {
     padding: 40px 36px;
     border-radius: 15px;
   }
-  .footer__nav{
+  .footer__nav {
     justify-content: start;
   }
-  .footer__menu{
+  .footer__menu {
     flex-direction: column;
     gap: 40px;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .footer__contacts{
+  .footer__contacts {
     justify-content: start;
   }
 }
@@ -1054,10 +1054,10 @@ p.about__service:nth-child(3) {
   }
   .advantages {
     margin-bottom: 80px;
-    .adaptive__title{
+    .adaptive__title {
       font-size: 96rem;
     }
-    .advantages__top{
+    .advantages__top {
       flex-direction: column;
     }
     .advantage__top {
@@ -1076,15 +1076,15 @@ p.about__service:nth-child(3) {
     .advantage__list {
       flex-direction: column;
       gap: 40px;
-padding: 0 20px;
+      padding: 0 20px;
     }
-    .advantage__item{
+    .advantage__item {
       width: 100%;
       font-size: 1.81rem;
       padding: 96rem 138rem 87rem;
       border-radius: 45rem;
     }
-    .advantage__ico{
+    .advantage__ico {
       width: 228rem;
       height: 228rem;
     }
@@ -1142,22 +1142,19 @@ padding: 0 20px;
   .service__text {
     max-width: 100%;
   }
-  .footer__nav{
+  .footer__nav {
     flex-direction: column;
     align-items: start;
   }
 }
-
-
 
 #auto {
   position: absolute;
   width: 88%;
   top: 63.61%;
   left: 130.77%;
-  // animation: carMoving 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
-.car{
+.car {
   width: 100%;
 }
 
@@ -1170,7 +1167,6 @@ padding: 0 20px;
   border-radius: 50%;
   border: 5px solid #000;
   position: absolute;
-  // animation: wheelsRolling 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 #wheel1 {
   left: 23%;
@@ -1204,9 +1200,8 @@ padding: 0 20px;
 }
 
 .car-moving {
-  animation: carMoving 5s forwards;
+  animation: carMoving 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
-
 .wheels-rolling {
-  animation: wheelsRolling 5s forwards;
+  animation: wheelsRolling 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }

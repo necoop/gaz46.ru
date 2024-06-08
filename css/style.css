@@ -1167,9 +1167,9 @@ p.about__service:nth-child(3) {
   }
 }
 .car-moving {
-  animation: carMoving 5s forwards;
+  animation: carMoving 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .wheels-rolling {
-  animation: wheelsRolling 5s forwards;
+  animation: wheelsRolling 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }/*# sourceMappingURL=style.css.map */
