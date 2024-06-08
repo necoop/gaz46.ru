@@ -279,6 +279,8 @@ main.container {
 .main__pic__container {
   padding-top: 108px;
   max-width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .main__pic {
@@ -1111,4 +1113,63 @@ p.about__service:nth-child(3) {
     flex-direction: column;
     align-items: start;
   }
+}
+#auto {
+  position: absolute;
+  width: 88%;
+  top: 63.61%;
+  left: 130.77%;
+}
+
+.car {
+  width: 100%;
+}
+
+.wheel {
+  width: 13%; /* Диаметр колеса */
+  aspect-ratio: 1/1;
+  top: 40%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px solid #000;
+  position: absolute;
+}
+
+#wheel1 {
+  left: 23%;
+}
+
+#wheel2 {
+  left: 77%;
+}
+
+@keyframes carMoving {
+  0% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-156%);
+  }
+  100% {
+    transform: translateX(-156%);
+  }
+}
+@keyframes wheelsRolling {
+  0% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1296deg);
+  }
+  100% {
+    transform: rotate(-1296deg);
+  }
+}
+.car-moving {
+  animation: carMoving 5s forwards;
+}
+
+.wheels-rolling {
+  animation: wheelsRolling 5s forwards;
 }/*# sourceMappingURL=style.css.map */
