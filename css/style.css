@@ -1045,7 +1045,7 @@ p.about__service:nth-child(3) {
   .advantages .advantage__top {
     align-items: flex-start;
     gap: 72rem;
-    padding: 0 20px;
+    padding: 0;
     margin-bottom: 40px;
   }
   .advantages .advantage__text {
