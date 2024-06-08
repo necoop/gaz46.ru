@@ -618,6 +618,80 @@ p.about__service:nth-child(3) {
   }
 }
 
+// Окончание ADVANTAGES
+
+// Секция FOOTER
+.footer{
+  padding: 105px 40px;
+  background: #006939;
+  border-radius: 30px;
+  margin-bottom: 60px;
+}
+.footer__menu{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.footer__pic{
+  width: 30.77%;
+}
+.footer__logo{
+  display: flex;
+  width: clamp(245px, 245px + 184 * (100vw - 430px) / 1010, 429px);
+}
+.footer__inscription{
+  width: 71.56%;
+  // height: 94px;
+  aspect-ratio: 307 / 94;
+  border-radius: 50px;
+  background: #fff;
+  margin-left: -2.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #272727;
+  font-family: 'Rimma-sans';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(12px, 12px + 10 * (100vw - 430px) / 1010, 22px);
+}
+.footer__nav{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: 'Geologica';
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  align-items: center;
+}
+.footer__contacts{
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__contacts__item{
+  a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+.footer__envelope{
+  width: 26px;
+  height: 18px;
+}
+.footer__phone{
+  width: 28px;
+  height: 28px;
+}
+// Окончание FOOTER
+
 @media (max-width: 1440px) {
   // main {
   //   &.container {
@@ -952,6 +1026,22 @@ p.about__service:nth-child(3) {
   p.about__service:nth-child(3) {
     margin-top: -57px;
   }
+  .footer{
+    padding: 40px 36px;
+    border-radius: 15px;
+  }
+  .footer__nav{
+    justify-content: start;
+  }
+  .footer__menu{
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer__contacts{
+    justify-content: start;
+  }
 }
 
 // Мобильные телефоны
@@ -1049,5 +1139,9 @@ padding: 0 20px;
   .services__description,
   .service__text {
     max-width: 100%;
+  }
+  .footer__nav{
+    flex-direction: column;
+    align-items: start;
   }
 }
