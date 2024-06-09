@@ -259,6 +259,10 @@ main.container {
   border-radius: 50px;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+}
+.main__button:hover {
+  background: #006939;
 }
 
 .addresses {
@@ -274,6 +278,39 @@ main.container {
 .desktop__button {
   display: flex;
   align-items: center;
+  transition: 0.3s ease all;
+}
+.desktop__button .metaball {
+  background-image: url(../img/Metaball.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -4px;
+  position: relative;
+}
+.desktop__button .metaball::before {
+  content: "";
+  background-image: url(../img/metaball_red_hover.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+.desktop__button:hover .call {
+  background: #f11820;
+}
+.desktop__button:hover .phone__ball {
+  background: #f11820;
+}
+.desktop__button:hover .metaball::before {
+  opacity: 1;
+}
+.desktop__button:hover .envelope__box::before {
+  opacity: 1;
 }
 
 .call {
@@ -296,6 +333,28 @@ main.container {
   align-items: center;
   border-radius: 50%;
   margin-left: -12px;
+  transition: 0.3s ease all;
+}
+.phone__ball .envelope__box {
+  width: 40px;
+  height: 32px;
+  background: url(../img/red_envelope.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.phone__ball .envelope__box::before {
+  content: "";
+  background: url(../img/green_envelope_small.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease all;
 }
 
 .main__pic__container {
