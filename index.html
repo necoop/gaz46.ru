@@ -46,7 +46,7 @@
           ></a>
         </li>
         <li class="nav__icons__item mobile__icon">
-          <div class="nav__icon"><div class="menu__icon"></div></div>
+          <div class="nav__icon" id="nav__icon"><div class="menu__icon"></div></div>
         </li>
       </ul>
     </nav>
@@ -308,26 +308,26 @@
         </span>
       </div>
       <ul class="advantage__list">
-        <li class="advantage__item">
+        <li class="advantage__item counter-container" data-target="" id="counter-container-1">
           <div class="advantage__top">
             <img src="img/adv_1.png" alt="Баллон" class="advantage__ico" />
             <span class="advantage__text">Опыт работы</span>
           </div>
-          <span class="stat">23 года</span>
+          <span class="stat"><span class="counter">0</span> года</span>
         </li>
-        <li class="advantage__item">
+        <li class="advantage__item counter-container" data-target="99" id="counter-container-2">
           <div class="advantage__top">
             <img src="img/adv_2.png" alt="Баллон" class="advantage__ico" />
             <span class="advantage__text">Довольных клиентов</span>
           </div>
-          <span class="stat">99%</span>
+          <span class="stat"><span class="counter">99</span>%</span>
         </li>
-        <li class="advantage__item">
+        <li class="advantage__item counter-container" id="counter-container-3" data-target="240">
           <div class="advantage__top">
             <img src="img/adv_3.png" alt="Баллон" class="advantage__ico" />
             <span class="advantage__text">Рост компании</span>
           </div>
-          <span class="stat">240%</span>
+          <span class="stat"><span class="counter">240</span>%</span>
         </li>
       </ul>
     </section>
@@ -363,6 +363,9 @@
         </ul>
       </div>
     </footer>
+    <section class="pop-up">
+
+    </section>
     <script src="scripts/main.js"></script>
   </body>
 </html>

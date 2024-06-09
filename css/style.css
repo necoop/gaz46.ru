@@ -141,6 +141,11 @@ body {
   align-items: center;
 }
 
+#nav__icon {
+  position: relative;
+  z-index: 100;
+}
+
 .mail__icon img {
   width: 26px;
 }
@@ -161,6 +166,7 @@ body {
   height: 3px;
   background: #ffffff;
   border-radius: 2px;
+  transition: 0.3s ease all;
 }
 .menu__icon::before, .menu__icon::after {
   content: "";
@@ -173,9 +179,23 @@ body {
 }
 .menu__icon::before {
   top: -10px;
+  transition: 0.3s ease all;
 }
 .menu__icon::after {
   top: 10px;
+  transition: 0.3s ease all;
+}
+
+.menu__icon__on {
+  rotate: 45deg;
+}
+.menu__icon__on::before, .menu__icon__on::after {
+  top: 0;
+}
+.menu__icon__on::before {
+  width: 26px;
+  rotate: 90deg;
+  left: 0;
 }
 
 main {
