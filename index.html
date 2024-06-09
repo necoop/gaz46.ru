@@ -20,33 +20,84 @@
     ></script>
   </head>
   <body>
-    <nav class="nav container">
-      <a href="#" class="logo">
+    <nav class="nav container" id="main">
+      <a href="#main" class="logo">
         <img src="img/logo.svg" alt="logo" />
         <div class="inscription">
           <span>газинжиниринг</span>
         </div>
       </a>
       <ul class="menu">
-        <li class="menu__item"><a href="#">контакты</a></li>
-        <li class="menu__item"><a href="#">услуги</a></li>
-        <li class="menu__item"><a href="#">преимущества</a></li>
+        <li class="menu__item"><a href="#address">контакты</a></li>
+        <li class="menu__item"><a href="#services">услуги</a></li>
+        <li class="menu__item"><a href="#advantages">преимущества</a></li>
       </ul>
       <ul class="nav__icons">
         <li class="nav__icons__item desktop__icon">
-          <a href="#"
+          <a href="mailto:gaz46kursk@mail.ru"
             ><div class="nav__icon mail__icon">
               <img src="img/envelope.png" alt="конверт" /></div
           ></a>
         </li>
         <li class="nav__icons__item desktop__icon">
-          <a href="#"
+          <a href="#address"
             ><div class="nav__icon phone__icon">
               <img src="img/phone.png" alt="телефон" /></div
           ></a>
         </li>
         <li class="nav__icons__item mobile__icon">
           <div class="nav__icon" id="nav__icon"><div class="menu__icon"></div></div>
+        </li>
+        <li class="pop-up mobile__icon">
+          <div class="pop-up__menu" id="pop-up__menu">
+            <ul class="pop-up__menu__inner">
+              <li class="pop-up__item">
+                <ul class="pop-up__nav__menu">
+                  <li class="pop-up__nav__menu__item">
+                    <a href="#address">Контакты</a>
+                  </li>
+                  <li class="pop-up__nav__menu__item">
+                    <a href="#services">Услуги</a>
+                  </li>
+                  <li class="pop-up__nav__menu__item">
+                    <a href="#advantages">Преимущества</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pop-up__item">
+                <ul class="pop-up__addresses">
+                  <li class="pop-up__address__item">
+                    <a href="#address" class="main__button addresses">адреса</a>
+                  </li>
+                  <li class="pop-up__address__item">
+                    <a href="tel:+74712513740" class="mobile__button">
+                      <div class="main__button call">позвонить</div>
+                      <img src="img/Metaball.svg" alt="Metaball" class="metaball" />
+                      <div class="phone__ball">
+                        <img src="img/red_telephone.png" alt="telephone" class="red__phone" />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="pop-up__item">
+                <ul class="pop-up__icons">
+                  <li class="pop-up__icon__item">
+                    <a href="mailto:gaz46kursk@mail.ru"
+                      ><div class="nav__icon mail__icon">
+                        <img src="img/envelope.png" alt="конверт" /></div
+                    ></a>
+                  </li>
+                  <li class="pop-up__icon__item">
+                    <a href="tel:+74712513740"
+                      ><div class="nav__icon phone__icon">
+                        <img src="img/phone.png" alt="телефон" /></div
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>
@@ -62,15 +113,15 @@
           а&nbsp;так&nbsp;же&nbsp;заправкой автомобильных и бытовых газовых баллонов.
         </p>
         <div class="button__container">
-          <a href="#" class="main__button addresses">адреса</a>
-          <a href="#" class="mobile__button">
+          <a href="#address" class="main__button addresses">адреса</a>
+          <a href="tel:+74712513740" class="mobile__button">
             <div class="main__button call">позвонить</div>
             <img src="img/Metaball.svg" alt="Metaball" class="metaball" />
             <div class="phone__ball">
               <img src="img/red_telephone.png" alt="telephone" class="red__phone" />
             </div>
           </a>
-          <a href="#" class="desktop__button">
+          <a href="mailto:gaz46kursk@mail.ru" class="desktop__button">
             <div class="main__button call">написать</div>
             <img src="img/Metaball.svg" alt="Metaball" class="metaball" />
             <div class="phone__ball">
@@ -90,7 +141,7 @@
     </main>
     <map name="yandex" id="map" class="container"> </map>
     <script src="scripts/ymap.js"></script>
-    <address class="address container__min">
+    <address class="address container__min" id="address">
       <div class="address__title">
         <h2 class="adaptive__title"><span>Наши</span>&nbsp;<span>Адреса</span></h2>
         <span class="address__span"
@@ -147,7 +198,7 @@
         </ul>
       </div>
     </section>
-    <section class="services container">
+    <section class="services container" id="services">
       <div class="services__inner">
         <div class="our__services">
           <h2 class="adaptive__title">Наши <span class="playfair">Услуги</span></h2>
@@ -176,11 +227,11 @@
                 </p>
                 <ul class="service__buttons">
                   <li class="service__button__item">
-                    <a href="#" class="service__address service__btn">Адреса</a>
+                    <a href="#address" class="service__address service__btn">Адреса</a>
                   </li>
                   <li class="service__button__item desktop__button">
-                    <a href="#" class="big__btn">
-                      <span href="#" class="service__address service__btn">Написать</span>
+                    <a href="mailto:gaz46kursk@mail.ru" class="big__btn">
+                      <span class="service__address service__btn">Написать</span>
                       <img src="img/jumper.svg" alt="перемычка" class="btn__jumper" />
                       <div class="box__envelope">
                         <img src="img/red_envelope.png" alt="конверт" class="btn__envelope" />
@@ -188,8 +239,8 @@
                     </a>
                   </li>
                   <li class="service__button__item mobile__button">
-                    <a href="#" class="big__btn">
-                      <span href="#" class="service__address service__btn">Позвонить</span>
+                    <a href="tel:+74712513740" class="big__btn">
+                      <span class="service__address service__btn">Позвонить</span>
                       <img src="img/jumper.svg" alt="перемычка" class="btn__jumper" />
                       <div class="box__envelope">
                         <img src="img/red_telephone.png" alt="телефон" class="btn__phone" />
@@ -221,11 +272,11 @@
                 </p>
                 <ul class="service__buttons">
                   <li class="service__button__item">
-                    <a href="#" class="service__address service__btn">Адреса</a>
+                    <a href="#address" class="service__address service__btn">Адреса</a>
                   </li>
                   <li class="service__button__item desktop__button">
-                    <a href="#" class="big__btn">
-                      <span href="#" class="service__address service__btn">Написать</span>
+                    <a href="mailto:gaz46kursk@mail.ru" class="big__btn">
+                      <span href="mailto:gaz46kursk@mail.ru" class="service__address service__btn">Написать</span>
                       <img src="img/jumper.svg" alt="перемычка" class="btn__jumper" />
                       <div class="box__envelope">
                         <img src="img/red_envelope.png" alt="конверт" class="btn__envelope" />
@@ -233,8 +284,8 @@
                     </a>
                   </li>
                   <li class="service__button__item mobile__button">
-                    <a href="#" class="big__btn">
-                      <span href="#" class="service__address service__btn">Позвонить</span>
+                    <a href="tel:+74712513740" class="big__btn">
+                      <span class="service__address service__btn">Позвонить</span>
                       <img src="img/jumper.svg" alt="перемычка" class="btn__jumper" />
                       <div class="box__envelope">
                         <img src="img/red_telephone.png" alt="телефон" class="btn__phone" />
@@ -273,11 +324,11 @@
                 </p>
                 <ul class="service__buttons">
                   <li class="service__button__item">
-                    <a href="#" class="service__address service__btn">Адреса</a>
+                    <a href="#address" class="service__address service__btn">Адреса</a>
                   </li>
                   <li class="service__button__item desktop__button">
-                    <a href="#" class="big__btn">
-                      <span href="#" class="service__address service__btn">Написать</span>
+                    <a href="mailto:gaz46kursk@mail.ru" class="big__btn">
+                      <span class="service__address service__btn">Написать</span>
                       <img src="img/jumper.svg" alt="перемычка" class="btn__jumper" />
                       <div class="box__envelope">
                         <img src="img/red_envelope.png" alt="конверт" class="btn__envelope" />
@@ -285,8 +336,8 @@
                     </a>
                   </li>
                   <li class="service__button__item mobile__button">
-                    <a href="#" class="big__btn">
-                      <span href="#" class="service__address service__btn">Позвонить</span>
+                    <a href="tel:+74712513740" class="big__btn">
+                      <span class="service__address service__btn">Позвонить</span>
                       <img src="img/jumper.svg" alt="перемычка" class="btn__jumper" />
                       <div class="box__envelope">
                         <img src="img/red_telephone.png" alt="телефон" class="btn__phone" />
@@ -300,7 +351,7 @@
         </div>
       </div>
     </section>
-    <section class="advantages container">
+    <section class="advantages container" id="advantages">
       <div class="advantages__top">
         <h2 class="adaptive__title">Наши <span class="playfair">Преимущества</span></h2>
         <span class="advatages__text">
@@ -336,7 +387,7 @@
     </div>
     <footer class="footer container">
       <div class="footer__menu">
-        <a href="#">
+        <a href="#main">
           <div class="footer__logo">
             <img src="img/footer_logo.png" alt="лого" class="footer__pic" />
             <div class="footer__inscription">
@@ -345,27 +396,29 @@
           </div>
         </a>
         <ul class="footer__nav">
-          <li class="footer__nav__item"><a href="#">Контакты</a></li>
-          <li class="footer__nav__item"><a href="#">Услуги</a></li>
-          <li class="footer__nav__item"><a href="#">Преимущества</a></li>
+          <li class="footer__nav__item"><a href="#address">Контакты</a></li>
+          <li class="footer__nav__item"><a href="#services">Услуги</a></li>
+          <li class="footer__nav__item"><a href="#advantages">Преимущества</a></li>
         </ul>
         <ul class="footer__contacts">
           <li class="footer__contacts__item">
-            <a href="#">
+            <a href="mailto:gaz46kursk@mail.ru">
               <img src="img/green_envelope.svg" alt="конверт" class="footer__envelope" />
             </a>
           </li>
-          <li class="footer__contacts__item">
-            <a href="#">
+          <li class="footer__contacts__item desktop__icon">
+            <a href="#address">
+              <img src="img/green_phone_contur.svg" alt="телефон" class="footer__phone" />
+            </a>
+          </li>
+          <li class="footer__contacts__item mobile__icon">
+            <a href="tel:+74712513740">
               <img src="img/green_phone_contur.svg" alt="телефон" class="footer__phone" />
             </a>
           </li>
         </ul>
       </div>
     </footer>
-    <section class="pop-up">
-
-    </section>
     <script src="scripts/main.js"></script>
   </body>
 </html>
