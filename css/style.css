@@ -124,6 +124,22 @@ body {
 .menu__item {
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
+}
+.menu__item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  top: 25px;
+  background: #272727;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+.menu__item:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .nav__icons {
@@ -836,6 +852,27 @@ p.about__service:nth-child(3) {
   align-items: center;
 }
 
+.footer__nav__item {
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.footer__nav__item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  top: 25px;
+  background: #fff;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+.footer__nav__item:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
 .footer__contacts {
   display: flex;
   gap: 15px;
@@ -851,6 +888,7 @@ p.about__service:nth-child(3) {
   align-items: center;
   border-radius: 50%;
   background: #fff;
+  position: relative;
 }
 
 .footer__envelope {

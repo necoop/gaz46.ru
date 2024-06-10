@@ -132,6 +132,26 @@ body {
 
 .menu__item {
   height: fit-content;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 25px;
+    background: #272727;
+    opacity: 0;  // начальное значение прозрачности
+    transition: width 0.3s ease, opacity 0.3s ease; // задаем переходы для ширины и прозрачности
+  }
+  
+  &:hover {
+    &::after {
+      width: 100%; // ширина при наведении
+      opacity: 1;  // непрозрачность при наведении
+    }
+  }
 }
 
 .nav__icons {
@@ -936,7 +956,34 @@ p.about__service:nth-child(3) {
   text-transform: capitalize;
   color: #fff;
   align-items: center;
+
+
 }
+
+.footer__nav__item{
+  height: fit-content;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 25px;
+    background: #fff;
+    opacity: 0;  // начальное значение прозрачности
+    transition: width 0.3s ease, opacity 0.3s ease; // задаем переходы для ширины и прозрачности
+  }
+  
+  &:hover {
+    &::after {
+      width: 100%; // ширина при наведении
+      opacity: 1;  // непрозрачность при наведении
+    }
+  }
+}
+
 
 .footer__contacts {
   display: flex;
@@ -954,7 +1001,10 @@ p.about__service:nth-child(3) {
     align-items: center;
     border-radius: 50%;
     background: #fff;
+    position: relative;
   }
+
+
 }
 
 .footer__envelope {
