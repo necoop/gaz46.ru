@@ -133,7 +133,7 @@ body {
 .menu__item {
   height: fit-content;
   position: relative;
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -142,14 +142,14 @@ body {
     left: 0;
     top: 25px;
     background: #272727;
-    opacity: 0;  // начальное значение прозрачности
+    opacity: 0; // начальное значение прозрачности
     transition: width 0.3s ease, opacity 0.3s ease; // задаем переходы для ширины и прозрачности
   }
-  
+
   &:hover {
     &::after {
       width: 100%; // ширина при наведении
-      opacity: 1;  // непрозрачность при наведении
+      opacity: 1; // непрозрачность при наведении
     }
   }
 }
@@ -157,7 +157,6 @@ body {
 .nav__icons {
   display: flex;
   justify-content: space-between;
-  // width: 115px;
   height: 50px;
   gap: 15px;
 }
@@ -430,6 +429,8 @@ main {
   max-width: 100%;
 }
 
+// Окончание MAIN
+
 // MAP
 #map {
   display: block;
@@ -547,6 +548,8 @@ main {
   margin: 0 22px;
 }
 
+// Окончание АДРЕСА
+
 // Секция ПРОПАН
 .propane {
   display: flex;
@@ -555,7 +558,6 @@ main {
 
   h2 {
     font-style: italic;
-    // margin-bottom: 32px;
   }
 }
 
@@ -578,7 +580,6 @@ main {
   font-size: 26px;
   font-weight: 100;
   line-height: 1.3;
-  // margin-bottom: 38px;
 }
 
 .propane__proporties {
@@ -596,6 +597,8 @@ main {
   border: 2px solid #f11820;
 }
 
+// Окончание секции ПРОПАН
+
 // Секция SERVICES
 section.services {
   margin-bottom: 120px;
@@ -603,7 +606,6 @@ section.services {
 
 .services__inner {
   padding-top: 120px;
-  // padding: 120px 0;
   background: #006939;
   border-radius: 30px;
   max-width: 1320px;
@@ -618,7 +620,6 @@ section.services {
   display: flex;
   justify-content: space-between;
 
-  // margin-bottom: 120px;
   .adaptive__title {
     align-self: center;
     margin-right: 15px;
@@ -643,11 +644,6 @@ section.services {
   padding: 120px 42px;
 
   h2 {
-    // letter-spacing: clamp(
-    //   -1.56px,
-    //   calc((32px + (52 - 32) * ((100vw - 430px) / (1440 - 430))) * -0.03),
-    //   -0.96px
-    // );
     letter-spacing: -4px;
     line-height: 1.1;
     margin-bottom: 24px;
@@ -682,7 +678,6 @@ section.services {
   transition: 0.3s ease all;
   border: 5px solid #fff;
 }
-
 
 .service__btn {
   font-family: "Geologica";
@@ -785,28 +780,17 @@ section.services {
   }
 }
 
-
-
-
-
 .btn__phone {
   width: 38px;
   height: 38px;
 }
 
-// .service__item{
-//   padding-bottom: 120px;
-// }
-// .service__box {
-//   margin-bottom: 120px;
-// }
 .service__frame__container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
-  // margin-bottom: 120px;
   &::before,
   &::after {
     content: "";
@@ -872,8 +856,6 @@ p.about__service:nth-child(3) {
     justify-content: space-between;
     width: 350em;
     aspect-ratio: 350 / 250;
-    // width: 350rem;
-    // height: 250rem;
     background: #f11820;
     padding: 32rem 46rem 29rem;
     border-radius: 15rem;
@@ -932,7 +914,6 @@ p.about__service:nth-child(3) {
 
 .footer__inscription {
   width: 71.56%;
-  // height: 94px;
   aspect-ratio: 307 / 94;
   border-radius: 50px;
   background: #fff;
@@ -960,7 +941,7 @@ p.about__service:nth-child(3) {
 
 }
 
-.footer__nav__item{
+.footer__nav__item {
   height: fit-content;
   position: relative;
 
@@ -972,14 +953,14 @@ p.about__service:nth-child(3) {
     left: 0;
     top: 25px;
     background: #fff;
-    opacity: 0;  // начальное значение прозрачности
+    opacity: 0; // начальное значение прозрачности
     transition: width 0.3s ease, opacity 0.3s ease; // задаем переходы для ширины и прозрачности
   }
-  
+
   &:hover {
     &::after {
       width: 100%; // ширина при наведении
-      opacity: 1;  // непрозрачность при наведении
+      opacity: 1; // непрозрачность при наведении
     }
   }
 }
@@ -1003,8 +984,6 @@ p.about__service:nth-child(3) {
     background: #fff;
     position: relative;
   }
-
-
 }
 
 .footer__envelope {
@@ -1124,9 +1103,6 @@ p.about__service:nth-child(3) {
     }
   }
 
-  // .button__container {
-  //   flex-direction: column;
-  // }
   .call {
     width: calc(100% - 121px);
     padding-top: 0;
@@ -1161,21 +1137,14 @@ p.about__service:nth-child(3) {
   }
 
   .our__services {
-    // flex-direction: column;
-    // align-items: center;
-    // gap: 20px;
     justify-content: space-around;
-    // max-width: 496px;
     width: 100%;
     padding: 0;
 
-    // margin-left: auto;
-    // margin-right: auto;
     .adaptive__title {
       align-self: center;
       margin-right: 0;
       width: 45%;
-      // padding-top: 40px;
     }
   }
 
@@ -1199,10 +1168,6 @@ p.about__service:nth-child(3) {
     gap: 30px;
   }
 
-  // .service__buttons {
-  //   flex-direction: column;
-  //   gap: 20px;
-  // }
   .service__btn {
     padding-left: clamp(16px, calc(16px + (52 - 16) * ((100vw - 992px) / (1440 - 992))), 56px);
     padding-right: clamp(16px, calc(16px + (52 - 16) * ((100vw - 992px) / (1440 - 992))), 56px);
@@ -1213,7 +1178,6 @@ p.about__service:nth-child(3) {
   }
 
   .service__address {
-    // width: 100%;
     display: inline-block;
     text-align: center;
   }
@@ -1227,7 +1191,6 @@ p.about__service:nth-child(3) {
   }
 
   .service__list {
-    // padding: 40px 0;
     padding-top: 80px;
     padding-right: 0;
     padding-left: 0;
@@ -1391,9 +1354,6 @@ p.about__service:nth-child(3) {
     border-radius: 15px;
   }
 
-  // .our__services {
-  //   margin-bottom: 40px;
-  // }
   .stove__img {
     border-radius: 15px;
     max-width: 496px;
@@ -1411,13 +1371,7 @@ p.about__service:nth-child(3) {
     border-radius: 15px;
   }
 
-  // .our__services, .service__list{
-  //   padding-left: 20px;
-  //   padding-right: 20px;
-  // }
   .services__inner {
-    // padding-left: 16px;
-    // padding-right: 16px;
     padding-top: 40px;
   }
 
@@ -1440,7 +1394,6 @@ p.about__service:nth-child(3) {
       align-self: flex-start;
       margin-right: 0;
       width: 100%;
-      // padding-top: 40px;
     }
   }
 
@@ -1599,18 +1552,6 @@ p.about__service:nth-child(3) {
     padding: 14px 20px;
   }
 
-  // .about__service {
-  //   margin-bottom: 72px;
-  // }
-
-  // .service__text, .services__description{
-  //   max-width: 100%;
-  // }
-  // .our__services,
-  // .service__list {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
   .service__btn {
     padding: 0;
     height: 92px;
@@ -1622,10 +1563,6 @@ p.about__service:nth-child(3) {
   .service__buttons {
     gap: 32px;
   }
-
-  // .service__box {
-  //   margin-bottom: 80px;
-  // }
 }
 
 @media (max-width: 470px) {

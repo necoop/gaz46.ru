@@ -79,6 +79,30 @@ document.addEventListener("DOMContentLoaded", function () {
   containers.forEach((container) => observer.observe(container));
 });
 
+
+// Склонение слова "Лет"
+yearsWord = document.getElementById('year');
+yearsWord.textContent = getYearWord(new Date().getFullYear() - 2001);
+function getYearWord(number) {
+  const lastDigit = number % 10;
+  const lastTwoDigits = number % 100;
+
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+    return 'лет';
+  }
+
+  if (lastDigit === 1) {
+    return 'год';
+  }
+
+  if (lastDigit >= 2 && lastDigit <= 4) {
+    return 'года';
+  }
+
+  return 'лет';
+}
+
+
 //  Блокировка вертикального скролла при открытии поп-ап меню
 let isScrollBlocked = false;
 document.getElementById("nav__icon").addEventListener("click", function () {
