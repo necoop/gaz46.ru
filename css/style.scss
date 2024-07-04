@@ -3,35 +3,42 @@
   src: url(../fonts/Geologica-Bold.ttf) format("truetype");
   font-weight: 700;
 }
+
 @font-face {
   font-family: "Geologica";
   src: url(../fonts/Geologica-Medium.ttf) format("truetype");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "Geologica";
   src: url(../fonts/Geologica-Thin.ttf) format("truetype");
   font-weight: 100;
 }
+
 @font-face {
   font-family: "Geologica";
   src: url(../fonts/Geologica-Regular.ttf) format("truetype");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "Geologica";
   src: url(../fonts/Geologica-Light.ttf) format("truetype");
   font-weight: 300;
 }
+
 @font-face {
   font-family: "Geologica";
   src: url(../fonts/Geologica-SemiBold.ttf) format("truetype");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Rimma-sans";
   src: url(../fonts/RIMMA_SANS-BOLD.TTF) format("truetype");
 }
+
 html {
   /* Базовый размер шрифта */
   font-size: 1px;
@@ -39,7 +46,8 @@ html {
 
 @media (max-width: 1440px) {
   html {
-    font-size: calc(100vw / 1440); /* Пропорционально изменяем размер */
+    font-size: calc(100vw / 1440);
+    /* Пропорционально изменяем размер */
   }
 }
 
@@ -49,6 +57,7 @@ body {
   font-style: normal;
   color: #272727;
 }
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -56,6 +65,7 @@ body {
   padding-right: 60px;
   margin: 0 auto;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -63,6 +73,7 @@ body {
   padding-top: 20px;
   padding-bottom: 4px;
 }
+
 .logo {
   display: flex;
   width: 429px;
@@ -73,11 +84,13 @@ body {
   overflow: hidden;
   z-index: 30;
 }
-.logo > img:nth-child(1) {
+
+.logo>img:nth-child(1) {
   position: relative;
   z-index: 10;
   width: 30.77%;
 }
+
 .jumper {
   position: absolute;
   width: 58px;
@@ -85,6 +98,7 @@ body {
   left: -15px;
   top: 23px;
 }
+
 .inscription {
   position: absolute;
   // width: 307px;
@@ -106,6 +120,7 @@ body {
     text-transform: uppercase;
   }
 }
+
 .menu {
   text-transform: capitalize;
   display: flex;
@@ -117,7 +132,28 @@ body {
 
 .menu__item {
   height: fit-content;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 25px;
+    background: #272727;
+    opacity: 0; // начальное значение прозрачности
+    transition: width 0.3s ease, opacity 0.3s ease; // задаем переходы для ширины и прозрачности
+  }
+
+  &:hover {
+    &::after {
+      width: 100%; // ширина при наведении
+      opacity: 1; // непрозрачность при наведении
+    }
+  }
 }
+
 .nav__icons {
   display: flex;
   justify-content: space-between;
@@ -134,26 +170,31 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #nav__icon {
   position: relative;
   z-index: 100;
 }
+
 .mail__icon {
   & img {
     width: 26px;
   }
 }
+
 .phone__icon {
   & img {
     width: 28px;
   }
 }
+
 .mobile__icon {
   position: relative;
   display: none;
   cursor: pointer;
   font-family: "Geologica";
 }
+
 .menu__icon {
   position: absolute;
   width: 26px;
@@ -161,6 +202,7 @@ body {
   background: #ffffff;
   border-radius: 2px;
   transition: 0.3s ease all;
+
   &::before,
   &::after {
     content: "";
@@ -171,10 +213,12 @@ body {
     border-radius: 2px;
     left: 3px;
   }
+
   &::before {
     top: -10px;
     transition: 0.3s ease all;
   }
+
   &::after {
     top: 10px;
     transition: 0.3s ease all;
@@ -183,10 +227,12 @@ body {
 
 .menu__icon__on {
   rotate: 45deg;
+
   &::before,
   &::after {
     top: 0;
   }
+
   &::before {
     width: 26px;
     rotate: 90deg;
@@ -200,40 +246,49 @@ main {
     display: flex;
     justify-content: space-between;
   }
+
   padding-bottom: 161px;
   margin-bottom: 24px;
 }
+
 .main__text {
   h1 {
     font-size: 52px;
     letter-spacing: -2.08px;
     margin-bottom: 10px;
     font-weight: 500;
-    & > p:nth-child(3) {
+
+    &>p:nth-child(3) {
       margin-top: -10px;
     }
   }
+
   .playfair {
     margin-top: -10px;
   }
 }
-.main__text > p:nth-child(2) {
+
+.main__text>p:nth-child(2) {
   margin-top: -5px;
   font-size: 20px;
   font-weight: 100;
   max-width: 530px;
 }
+
 .playfair {
   font-family: "Playfair Display";
   font-style: italic;
 }
+
 .main__text {
   margin-top: 144px;
   max-width: 100%;
 }
+
 .italic {
   font-style: italic;
 }
+
 .button__container {
   display: flex;
   font-weight: 700;
@@ -242,6 +297,7 @@ main {
   margin-top: 33px;
   gap: 30px;
 }
+
 .main__button {
   text-transform: capitalize;
   height: 92px;
@@ -250,29 +306,35 @@ main {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+
   &:hover {
     background: #006939;
   }
 }
+
 .addresses {
   padding: 0 56px;
   background: #f11820;
 }
+
 .mobile__button {
   display: none;
   align-items: center;
 }
+
 .desktop__button {
   display: flex;
   align-items: center;
   transition: 0.3s ease all;
+
   .metaball {
     background-image: url(../img/Metaball.svg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -4px;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       background-image: url(../img/metaball_red_hover.svg);
       background-repeat: no-repeat;
@@ -286,20 +348,24 @@ main {
       transition: 0.3s ease all;
     }
   }
-  &:hover{
-    .call{
-    background: #f11820;
-    }
-    .phone__ball{
+
+  &:hover {
+    .call {
       background: #f11820;
     }
-    .metaball{
-      &::before{
+
+    .phone__ball {
+      background: #f11820;
+    }
+
+    .metaball {
+      &::before {
         opacity: 1;
       }
     }
-    .envelope__box{
-      &::before{
+
+    .envelope__box {
+      &::before {
         opacity: 1;
       }
     }
@@ -310,11 +376,13 @@ main {
   padding: 0 60px 0 48px;
   background: #006939;
 }
+
 .metaball {
   margin-left: -13px;
   width: 54px;
   height: 60px;
 }
+
 .phone__ball {
   width: 92px;
   height: 92px;
@@ -325,14 +393,16 @@ main {
   border-radius: 50%;
   margin-left: -12px;
   transition: 0.3s ease all;
-  .envelope__box{
+
+  .envelope__box {
     width: 40px;
     height: 32px;
     background: url(../img/red_envelope.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       background: url(../img/green_envelope_small.svg);
       background-repeat: no-repeat;
@@ -354,9 +424,12 @@ main {
   position: relative;
   overflow: hidden;
 }
+
 .main__pic {
   max-width: 100%;
 }
+
+// Окончание MAIN
 
 // MAP
 #map {
@@ -376,15 +449,18 @@ main {
 .address {
   font-style: normal;
 }
+
 .address__title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
-  & h2 > span:nth-child(2) {
+
+  & h2>span:nth-child(2) {
     font-family: "Playfair Display";
     font-style: italic;
   }
 }
+
 .address__span {
   max-width: 333px;
   width: 100%;
@@ -398,6 +474,7 @@ main {
   font-weight: 500;
   margin-bottom: 120px;
 }
+
 .contact__item {
   width: 100%;
   max-width: 33.3%;
@@ -405,15 +482,18 @@ main {
   flex-direction: column;
   gap: 30px;
 }
+
 .address__item,
 .phone__item,
 .address__span {
   font-size: 16px;
 }
+
 .address__item {
   display: flex;
   align-items: center;
   gap: 20px;
+
   &::before {
     content: url(../img/pointer.svg);
     display: inline-block;
@@ -421,10 +501,12 @@ main {
     height: 43px;
   }
 }
+
 .phone__item {
   display: flex;
   align-items: center;
   gap: 20px;
+
   &::before {
     content: url(../img/green_phone.svg);
     display: inline-block;
@@ -432,11 +514,13 @@ main {
     height: 35px;
   }
 }
+
 .phone__box {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .container__min {
   max-width: 1320px;
   padding: 0 40px;
@@ -450,6 +534,7 @@ main {
   width: 100%;
   padding: 0;
   margin-bottom: 120px;
+
   &::before,
   &::after {
     content: "";
@@ -458,19 +543,24 @@ main {
     background: #272727;
   }
 }
+
 .address__frame {
   margin: 0 22px;
 }
+
+// Окончание АДРЕСА
 
 // Секция ПРОПАН
 .propane {
   display: flex;
   justify-content: space-between;
   margin-bottom: 120px;
+
   h2 {
     font-style: italic;
   }
 }
+
 .propane__text {
   max-width: 536px;
   // padding-top: 56px;
@@ -478,21 +568,25 @@ main {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .stove__img {
   margin-right: 20px;
   border-radius: 30px;
   max-width: 650px;
 }
+
 .propane__description {
   font-family: "Geologica";
   font-size: 26px;
   font-weight: 100;
   line-height: 1.3;
 }
+
 .propane__proporties {
   display: flex;
   justify-content: space-between;
 }
+
 .proporties__item {
   font-family: "Geologica";
   font-weight: 100;
@@ -503,10 +597,13 @@ main {
   border: 2px solid #f11820;
 }
 
+// Окончание секции ПРОПАН
+
 // Секция SERVICES
 section.services {
   margin-bottom: 120px;
 }
+
 .services__inner {
   padding-top: 120px;
   background: #006939;
@@ -516,16 +613,19 @@ section.services {
   margin-right: auto;
   color: #fff;
 }
+
 .our__services {
   padding-left: 42px;
   padding-right: 42px;
   display: flex;
   justify-content: space-between;
+
   .adaptive__title {
     align-self: center;
     margin-right: 15px;
   }
 }
+
 .services__description {
   max-width: 387px;
   font-family: "Geologica";
@@ -533,25 +633,31 @@ section.services {
   font-size: 16px;
   line-height: 1.3;
 }
+
 .service__box {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 .service__list {
   padding: 120px 42px;
+
   h2 {
     letter-spacing: -1px;
     line-height: 1.1;
     margin-bottom: 24px;
   }
 }
+
 .service__pic {
   border-radius: 30px;
 }
+
 .service__text {
   max-width: 609px;
 }
+
 .about__service {
   font-family: "Geologica";
   font-size: 20px;
@@ -559,12 +665,20 @@ section.services {
   line-height: 1.3;
   margin-bottom: 29px;
 }
+
 .service__buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 554px;
+
 }
+
+.address__btn:hover {
+  transition: 0.3s ease all;
+  border: 5px solid #fff;
+}
+
 .service__btn {
   font-family: "Geologica";
   font-weight: 700;
@@ -574,14 +688,10 @@ section.services {
   border: 5px solid #f11820;
   width: fit-content;
   border-radius: 50px;
+  transition: 0.3s ease all;
+  z-index: 2;
 }
-.big__btn {
-  display: flex;
-  align-items: center;
-}
-.btn__jumper {
-  margin-left: -14px;
-}
+
 .box__envelope {
   width: 92px;
   height: 92px;
@@ -591,21 +701,96 @@ section.services {
   justify-content: center;
   align-items: center;
   margin-left: -14px;
+  transition: 0.3s ease all;
+  z-index: 2;
 }
+
+.big__btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn__jumper {
+  background: url(../img/jumper.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -14px;
+  position: relative;
+  width: 57px;
+  height: 57px;
+  opacity: 1;
+  transition: 0.3s ease all;
+
+  &::before {
+    content: '';
+    background: url(../img/jumper_white.svg);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease all;
+  }
+}
+
 .btn__envelope {
   width: 40px;
   height: 32px;
+  background: url(../img/red_envelope.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: 0.3s ease all;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/envelope_white.svg);
+    transition: 0.3s ease all;
+    opacity: 0;
+  }
 }
+
+.service__button__item.desktop__button:hover {
+  .service__btn {
+    transition: 0.3s ease all;
+    border: 5px solid #fff;
+  }
+
+  .btn__jumper::before {
+    opacity: 1;
+    transition: 0.3s ease all;
+
+  }
+
+  .box__envelope {
+    transition: 0.3s ease all;
+    border: 5px solid #fff;
+  }
+
+  .btn__envelope::before {
+    opacity: 1;
+    transition: 0.3s ease all;
+  }
+}
+
 .btn__phone {
   width: 38px;
   height: 38px;
 }
+
 .service__frame__container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  // margin-bottom: 120px;
+
   &::before,
   &::after {
     content: "";
@@ -614,13 +799,16 @@ section.services {
     background: #fff;
   }
 }
+
 .service__frame {
   margin: 0 22px;
 }
+
 .service__pic {
   max-width: 45%;
   align-self: center;
 }
+
 p.about__service:nth-child(3) {
   margin-top: -18px;
 }
@@ -628,12 +816,15 @@ p.about__service:nth-child(3) {
 // Секция AVANAGES
 .advantages {
   margin-bottom: 120px;
+
   .adaptive__title {
     font-size: 52em;
   }
+
   .advatages__text {
     max-width: 386rem;
   }
+
   .advantages__top {
     display: flex;
     justify-content: space-between;
@@ -641,12 +832,14 @@ p.about__service:nth-child(3) {
     padding: 0 42px;
     margin-bottom: 60px;
   }
+
   .advatages__text {
     max-width: 386px;
     font-family: "Geologica";
     font-weight: 100;
     font-size: 16px;
   }
+
   .advantage__list {
     display: flex;
     justify-content: space-between;
@@ -656,6 +849,7 @@ p.about__service:nth-child(3) {
     font-weight: 400;
     font-size: 1rem;
   }
+
   .advantage__item {
     display: flex;
     flex-direction: column;
@@ -668,20 +862,24 @@ p.about__service:nth-child(3) {
     box-sizing: border-box;
     font-size: 1rem;
   }
+
   .advantage__top {
     display: flex;
     gap: 24rem;
     justify-content: space-between;
   }
+
   .advantage__ico {
     width: 76rem;
     height: 76rem;
   }
+
   .advantage__text {
     align-self: center;
     line-height: 1.2;
     font-size: 22em;
   }
+
   .stat {
     font-size: 56em;
     font-weight: 700;
@@ -698,21 +896,24 @@ p.about__service:nth-child(3) {
   border-radius: 30px;
   margin-bottom: 60px;
 }
+
 .footer__menu {
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
+
 .footer__pic {
   width: 30.77%;
 }
+
 .footer__logo {
   display: flex;
   width: clamp(245px, 245px + 184 * (100vw - 430px) / 1010, 429px);
 }
+
 .footer__inscription {
   width: 71.56%;
-  // height: 94px;
   aspect-ratio: 307 / 94;
   border-radius: 50px;
   background: #fff;
@@ -726,6 +927,7 @@ p.about__service:nth-child(3) {
   text-transform: uppercase;
   font-size: clamp(12px, 12px + 10 * (100vw - 430px) / 1010, 22px);
 }
+
 .footer__nav {
   display: flex;
   justify-content: space-between;
@@ -735,13 +937,42 @@ p.about__service:nth-child(3) {
   text-transform: capitalize;
   color: #fff;
   align-items: center;
+
+
 }
+
+.footer__nav__item {
+  height: fit-content;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 25px;
+    background: #fff;
+    opacity: 0; // начальное значение прозрачности
+    transition: width 0.3s ease, opacity 0.3s ease; // задаем переходы для ширины и прозрачности
+  }
+
+  &:hover {
+    &::after {
+      width: 100%; // ширина при наведении
+      opacity: 1; // непрозрачность при наведении
+    }
+  }
+}
+
+
 .footer__contacts {
   display: flex;
   gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
+
 .footer__contacts__item {
   a {
     width: 50px;
@@ -751,16 +982,20 @@ p.about__service:nth-child(3) {
     align-items: center;
     border-radius: 50%;
     background: #fff;
+    position: relative;
   }
 }
+
 .footer__envelope {
   width: 26px;
   height: 18px;
 }
+
 .footer__phone {
   width: 28px;
   height: 28px;
 }
+
 // Окончание FOOTER
 
 // Поп-ап окно
@@ -774,9 +1009,11 @@ p.about__service:nth-child(3) {
   left: 100%;
   transition: 0.3s ease all;
 }
+
 .pop-up__menu__on {
   transform: translateX(-100%);
 }
+
 .pop-up__menu__inner {
   padding: 86px 16px 16px;
   display: flex;
@@ -785,23 +1022,28 @@ p.about__service:nth-child(3) {
   gap: 15px;
   height: 100%;
 }
+
 .pop-up__item {
   height: 100%;
 }
+
 .pop-up__nav__menu {
   font-size: 24px;
   line-height: 1.3;
   font-weight: 500;
   height: 100%;
 }
+
 .pop-up__nav__menu__item {
   text-align: end;
 }
+
 .pop-up__nav__menu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+
 .pop-up__addresses {
   color: #fff;
   font-weight: 700;
@@ -812,6 +1054,7 @@ p.about__service:nth-child(3) {
   gap: 40px;
   height: 100%;
 }
+
 .pop-up__icons {
   display: flex;
   flex-direction: column;
@@ -821,6 +1064,7 @@ p.about__service:nth-child(3) {
   align-items: end;
   height: 100%;
 }
+
 // Окончание окна поп-ап
 
 // Адаптив на 1440px
@@ -828,29 +1072,37 @@ p.about__service:nth-child(3) {
   .main__pic__container {
     padding-top: 80px;
   }
+
   .button__container {
     gap: 20px;
   }
+
   .addresses {
+    // padding: 0 36px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: clamp(36px, calc(36px + (56 - 36) * ((100vw - 992px) / (1440 - 992))), 56px);
     padding-right: clamp(36px, calc(36px + (56 - 36) * ((100vw - 992px) / (1440 - 992))), 56px);
   }
+
   .main__text {
     margin-top: 80px;
     max-width: 45%;
+
     & h1 {
       font-size: clamp(33px, calc(33px + (52 - 33) * ((100vw - 992px) / (1440 - 992))), 52px);
-      & > p:nth-child(2) {
+
+      &>p:nth-child(2) {
         font-size: clamp(26px, calc(26px + (46 - 26) * ((100vw - 992px) / (1440 - 992))), 46px);
         // margin-bottom: 5px;
       }
     }
-    & > p:nth-child(2) {
+
+    &>p:nth-child(2) {
       font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 992px) / (1440 - 992))), 20px);
     }
   }
+
   .call {
     width: calc(100% - 121px);
     padding-top: 0;
@@ -858,6 +1110,7 @@ p.about__service:nth-child(3) {
     padding-left: clamp(36px, calc(36px + (56 - 36) * ((100vw - 992px) / (1440 - 992))), 56px);
     padding-right: clamp(36px, calc(36px + (56 - 36) * ((100vw - 992px) / (1440 - 992))), 56px);
   }
+
   .adaptive__title {
     font-size: clamp(26px, calc(26px + (35 - 26) * ((100vw - 992px) / (1440 - 992))), 35px);
   }
@@ -867,12 +1120,15 @@ p.about__service:nth-child(3) {
     margin: 0;
     max-width: 45%;
   }
+
   .propane__description {
     font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 992px) / (1440 - 992))), 26px);
   }
+
   .propane__text {
     max-width: 45%;
   }
+
   .proporties__item {
     font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 992px) / (1440 - 992))), 16px);
     padding: 15px 11px;
@@ -884,6 +1140,7 @@ p.about__service:nth-child(3) {
     justify-content: space-around;
     width: 100%;
     padding: 0;
+
     .adaptive__title {
       align-self: center;
       margin-right: 0;
@@ -894,58 +1151,70 @@ p.about__service:nth-child(3) {
   .about__service {
     font-size: 16px;
   }
+
   .service__list h2 {
     margin-bottom: 0;
     letter-spacing: -1px;
   }
+
   .services__description,
   .service__text {
     width: 45%;
   }
+
   .service__text {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
+
   .service__btn {
     padding-left: clamp(16px, calc(16px + (52 - 16) * ((100vw - 992px) / (1440 - 992))), 56px);
     padding-right: clamp(16px, calc(16px + (52 - 16) * ((100vw - 992px) / (1440 - 992))), 56px);
   }
+
   .service__button__item {
     width: 100%;
   }
+
   .service__address {
     display: inline-block;
     text-align: center;
   }
+
   .big__btn {
     width: 100%;
   }
+
   span.service__address {
     width: calc(100% - 121px);
   }
 
   .service__list {
-    // padding: 40px 0;
     padding-top: 80px;
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 80px;
   }
+
   div.service__list:nth-child(6) {
     padding-bottom: 0;
   }
+
   div.service__list:nth-child(2) {
     padding-top: 40px;
   }
+
   .services__inner {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .about__service {
     margin-bottom: 0;
   }
 }
+
 // Окончание адаптива на 1440px
 
 // Адаптив на 991px
@@ -953,25 +1222,32 @@ p.about__service:nth-child(3) {
   .menu {
     display: none;
   }
+
   .desktop__icon {
     display: none;
   }
+
   .mobile__icon {
     display: block;
   }
+
   .desktop__button {
     display: none;
   }
+
   .mobile__button {
     display: flex;
   }
+
   .addresses {
     padding: 0 56px;
     background: #f11820;
   }
+
   .call {
     padding: 0 60px 0 48px;
   }
+
   main {
     &.container {
       flex-direction: column-reverse;
@@ -979,33 +1255,42 @@ p.about__service:nth-child(3) {
       padding-bottom: 80px;
     }
   }
+
   .main__text {
     max-width: 650px;
+
     h1 {
       font-size: clamp(35px, 35px + 17 * (100vw - 360px) / 1080, 52px);
       max-width: 100%;
+
       & .adaptive__title {
         font-size: clamp(26px, calc(26px + (52 - 26) * ((100vw - 360px) / (1440 - 360))), 52px);
       }
     }
   }
-  .main__text h1 > p:nth-child(2) {
+
+  .main__text h1>p:nth-child(2) {
     font-size: clamp(29px, 29px + 23 * (100vw - 360px) / 1080, 52px);
     margin-bottom: 5px;
   }
-  .main__text > p:nth-child(2) {
+
+  .main__text>p:nth-child(2) {
     font-size: clamp(16px, 16px + 4 * (100vw - 430px) / 1010, 20px);
   }
+
   .main__text {
     margin-top: 40px;
   }
+
   .button__container {
     flex-direction: column;
     gap: 30px;
   }
+
   #map {
     margin-bottom: 40px;
   }
+
   .contacts {
     flex-direction: column;
     align-items: center;
@@ -1016,33 +1301,41 @@ p.about__service:nth-child(3) {
     margin-left: auto;
     margin-right: auto;
   }
+
   .contact__item {
     max-width: 100%;
     gap: 12px;
   }
+
   .phone__item,
   .address__item {
     gap: 50px;
   }
+
   .frame__container {
     margin-bottom: 80px;
   }
+
   .propane {
     flex-direction: column;
     align-items: center;
     margin-bottom: 80px;
   }
+
   .propane__text {
     max-width: 536px;
     padding-top: 40px;
+
     h2 {
       margin-bottom: 10px;
     }
   }
+
   .propane__description {
     margin-bottom: 20px;
     font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 430px) / (1440 - 430))), 26px);
   }
+
   .proporties__item {
     font-size: 16px;
     line-height: 1.3;
@@ -1051,33 +1344,42 @@ p.about__service:nth-child(3) {
     padding-right: clamp(10px, calc(10px + (22 - 10) * ((100vw - 360px) / (991 - 360))), 22px);
     border-radius: 50px;
   }
+
   section.services {
     margin-bottom: 80px;
   }
+
   .services__inner {
     padding: 40px 0;
     border-radius: 15px;
   }
+
   .stove__img {
     border-radius: 15px;
     max-width: 496px;
   }
+
   .propane__text {
     max-width: 496px;
   }
+
   .service__pic {
     max-width: 100%;
   }
+
   .service__pic {
     border-radius: 15px;
   }
+
   .services__inner {
     padding-top: 40px;
   }
+
   .service__buttons {
     flex-direction: column;
     gap: 20px;
   }
+
   .our__services {
     flex-direction: column;
     align-items: center;
@@ -1087,60 +1389,75 @@ p.about__service:nth-child(3) {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+
     .adaptive__title {
       align-self: flex-start;
       margin-right: 0;
       width: 100%;
     }
   }
+
   .services__description {
     width: 100%;
   }
+
   .service__text {
     width: 100%;
   }
+
   .services__description,
   .service__text {
     max-width: 496px;
   }
+
   .service__box {
     flex-direction: column;
     align-items: center;
     gap: 40px;
   }
+
   .service__list h2 {
     margin-bottom: 18px;
   }
+
   .service__buttons {
     gap: 72px;
   }
+
   .service__btn {
     width: 100%;
   }
+
   .about__service {
     margin-bottom: 40px;
   }
+
   .our__services,
   .service__list {
     padding-right: 16px;
     padding-left: 16px;
   }
+
   p.about__service:nth-child(3) {
     margin-top: -57px;
   }
+
   .footer {
     padding: 40px 36px;
     border-radius: 15px;
   }
+
   .footer__nav {
     justify-content: start;
   }
+
   .footer__menu {
     flex-direction: column;
     gap: 40px;
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .footer__contacts {
     justify-content: start;
   }
@@ -1154,10 +1471,12 @@ p.about__service:nth-child(3) {
     background: #fff;
     padding-bottom: 20px;
   }
+
   main.container {
     margin-top: 83px;
   }
 }
+
 // Окончание адаптива на 991px
 
 // Мобильные телефоны
@@ -1166,14 +1485,18 @@ p.about__service:nth-child(3) {
     padding-left: 16px;
     padding-right: 16px;
   }
+
   .advantages {
     margin-bottom: 80px;
+
     .adaptive__title {
       font-size: 96rem;
     }
+
     .advantages__top {
       flex-direction: column;
     }
+
     .advantage__top {
       // flex-direction: column;
       align-items: flex-start;
@@ -1181,32 +1504,38 @@ p.about__service:nth-child(3) {
       padding: 0;
       margin-bottom: 40px;
     }
+
     .advantage__text {
       max-width: 100%;
       width: 100%;
       text-align: left;
       font-size: 77.77rem;
     }
+
     .advantage__list {
       flex-direction: column;
       gap: 40px;
       padding: 0 20px;
     }
+
     .advantage__item {
       width: 100%;
       font-size: 1.81rem;
       padding: 96rem 138rem 87rem;
       border-radius: 45rem;
     }
+
     .advantage__ico {
       width: 228rem;
       height: 228rem;
     }
+
     .stat {
       font-size: 168rem;
     }
   }
 }
+
 @media (max-width: 690px) {
   .address__title {
     flex-direction: column;
@@ -1217,10 +1546,12 @@ p.about__service:nth-child(3) {
     margin-right: auto;
     margin-bottom: 26px;
   }
+
   .proporties__item {
     font-size: 14px;
     padding: 14px 20px;
   }
+
   .service__btn {
     padding: 0;
     height: 92px;
@@ -1228,19 +1559,23 @@ p.about__service:nth-child(3) {
     align-items: center;
     justify-content: center;
   }
+
   .service__buttons {
     gap: 32px;
   }
 }
+
 @media (max-width: 470px) {
   .proporties__item {
     font-size: 12px;
     padding: 8px 10px;
   }
+
   .services__description,
   .service__text {
     max-width: 100%;
   }
+
   .footer__nav {
     flex-direction: column;
     align-items: start;
@@ -1253,12 +1588,14 @@ p.about__service:nth-child(3) {
   top: 63.61%;
   left: 130.77%;
 }
+
 .car {
   width: 100%;
 }
 
 .wheel {
-  width: 13%; /* Диаметр колеса */
+  width: 13%;
+  /* Диаметр колеса */
   aspect-ratio: 1 / 1;
   top: 40%;
   background-size: 100%;
@@ -1267,6 +1604,7 @@ p.about__service:nth-child(3) {
   border: 5px solid #000;
   position: absolute;
 }
+
 #wheel1 {
   left: 23%;
 }
@@ -1279,20 +1617,25 @@ p.about__service:nth-child(3) {
   0% {
     transform: translateX(0);
   }
+
   75% {
     transform: translateX(-156%);
   }
+
   100% {
     transform: translateX(-156%);
   }
 }
+
 @keyframes wheelsRolling {
   0% {
     transform: rotate(0deg);
   }
+
   75% {
     transform: rotate(-1296deg);
   }
+
   100% {
     transform: rotate(-1296deg);
   }
@@ -1301,6 +1644,7 @@ p.about__service:nth-child(3) {
 .car-moving {
   animation: carMoving 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
+
 .wheels-rolling {
   animation: wheelsRolling 5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
