@@ -1213,6 +1213,11 @@ p.about__service:nth-child(3) {
   .about__service {
     margin-bottom: 0;
   }
+  .footer{
+    margin-left: 60px;
+    margin-right: 60px;
+    width: calc(100% - 120px);
+  }
 }
 
 // Окончание адаптива на 1440px
@@ -1474,6 +1479,11 @@ p.about__service:nth-child(3) {
 
   main.container {
     margin-top: 83px;
+  }
+  .footer{
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
   }
 }
 

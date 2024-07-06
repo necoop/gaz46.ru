@@ -1081,6 +1081,11 @@ p.about__service:nth-child(3) {
   .about__service {
     margin-bottom: 0;
   }
+  .footer {
+    margin-left: 60px;
+    margin-right: 60px;
+    width: calc(100% - 120px);
+  }
 }
 @media (max-width: 991px) {
   .menu {
@@ -1286,6 +1291,11 @@ p.about__service:nth-child(3) {
   }
   main.container {
     margin-top: 83px;
+  }
+  .footer {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
   }
 }
 @media (max-width: 767px) {
